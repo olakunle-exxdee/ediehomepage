@@ -1,0 +1,64 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.7;
+  font-size: 100%;
+  background: $white;
+  color: $font;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: $dark;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.input {
+  position: relative;
+  input[type="email"] {
+    font-size: 10px;
+    padding: 1.1em 1em;
+    padding-right: 10em;
+    border-radius: 10px;
+    color: lighten($font, 40%);
+    border: none;
+    background: lighten($font, 75%);
+  }
+
+  input[type="submit"] {
+    position: absolute;
+    padding: 0.5em 1em;
+    border-radius: 7px;
+    border: none;
+    background: $accent;
+    color: lighten($font, 100%);
+    cursor: pointer;
+    left: 170px;
+    bottom: 2px;
+    font-size: 14px;
+  }
+
+  ::placeholder {
+    color: lighten($font, 40%);
+  }
+}

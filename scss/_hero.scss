@@ -1,0 +1,57 @@
+.hero {
+  margin: 1em;
+
+  @include desktop {
+    .hero__content {
+      font-size: 24px;
+
+      p:nth-of-type(1) {
+        font-size: 14px;
+      }
+    }
+    .hero__content2 {
+      display: none;
+    }
+
+    .hero__email {
+      display: none;
+    }
+  }
+
+  &__content {
+    padding: 0.5em 0;
+    max-width: 350px;
+    font-size: 24px;
+
+    p:nth-of-type(1) {
+      font-size: 12px;
+      color: $accent;
+    }
+  }
+
+  &__content2 {
+    padding: 1em 0;
+
+    font-size: 24px;
+    max-width: 350px;
+
+    p:nth-of-type(2) {
+      font-size: 12px;
+    }
+  }
+
+  &__img {
+    img {
+      width: 100%;
+      border-radius: 10px;
+    }
+  }
+
+  &__email {
+    margin: 0.5em 0;
+
+    p {
+      font-size: 10px;
+    }
+  }
+}

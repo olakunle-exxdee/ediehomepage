@@ -1,0 +1,66 @@
+#work {
+  a {
+    font-size: 12px;
+    color: $accent;
+
+    &:hover {
+      color: $greeny;
+    }
+  }
+  h1 {
+    margin-bottom: 1em;
+  }
+
+  img {
+    width: 100%;
+    max-width: 375px;
+    border-radius: 20px;
+  }
+  p {
+    margin-top: 0.25em;
+
+    font-size: 12px;
+  }
+}
+
+@include desktop {
+  .work__content {
+    position: relative;
+    .wrapper1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .wrapperone + .wrappertwo {
+        margin-left: 40px;
+      }
+
+      .wrapperone {
+        align-self: flex-end;
+        margin-top: 2em;
+      }
+
+      .wrappertwo {
+        align-self: flex-start;
+        margin-bottom: 2em;
+      }
+    }
+
+    h1 {
+      width: 30%;
+    }
+  }
+}
+
+.work__item1 {
+  margin: 2em 0;
+}
+.work__item2 {
+  margin: 2em 0;
+}
+.work__item3 {
+  margin: 2em 0;
+}
+.work__item4 {
+  margin: 2em 0;
+}

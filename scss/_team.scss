@@ -1,0 +1,110 @@
+#team {
+  margin: 4em 0;
+}
+
+.team__wrapper {
+  padding: 2em;
+  @include desktop {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .team__content {
+      h1 {
+        width: 60%;
+        font-size: 20px;
+      }
+    }
+
+    .team__content2 {
+      background: seagreen;
+      .quote {
+        font-size: 60px;
+        color: salmon;
+      }
+    }
+  }
+}
+
+.team__content {
+  margin-top: 0.5em 0;
+  p:nth-of-type(1) {
+    color: $redy;
+    font-size: 12px;
+  }
+  p:nth-of-type(2) {
+    font-size: 12px;
+    width: 60%;
+  }
+  h1 {
+    width: 60%;
+    font-size: 20px;
+  }
+}
+
+.team__img {
+  img {
+    width: 100%;
+    max-width: 375px;
+    border-radius: 20px;
+  }
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: minmax(100px, auto);
+  grid-template-areas:
+    "one one two two"
+    "one one two two"
+    "one one two two"
+    "one one two two"
+    "one one three three"
+    "one one three three"
+    "one one three three"
+    "one one three three";
+  max-width: 375px;
+
+  .one {
+    grid-area: one;
+    align-self: center;
+  }
+  .two {
+    grid-area: two;
+  }
+  .three {
+    grid-area: three;
+  }
+}
+.team__content2 {
+  margin: 3em 0 3em 0;
+  .quote {
+    font-size: 18px;
+
+    @include desktop {
+      font-size: 24px;
+      width: 50%;
+    }
+  }
+  &_img {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-top: 0.5em;
+
+    img + .gatsby {
+      margin-left: 20px;
+    }
+    img {
+      max-width: 80px;
+      border-radius: 10px;
+    }
+  }
+
+  .gatsby {
+    p:nth-of-type(1) {
+      font-size: 16px;
+    }
+    p:nth-of-type(2) {
+      font-size: 10px;
+    }
+  }
+}

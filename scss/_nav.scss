@@ -1,0 +1,56 @@
+.navbar {
+  padding: 1em;
+  &__item {
+    .material-icons {
+      position: relative;
+      cursor: pointer;
+
+      &:hover {
+        color: $greeny;
+      }
+    }
+  }
+
+  .navbar__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .hamburger {
+    cursor: pointer;
+    .bar {
+      display: block;
+      width: 20px;
+      height: 1px;
+      background: $font;
+      margin-bottom: 5px;
+    }
+  }
+}
+
+.list {
+  padding: 1em;
+
+  @include transit;
+  display: none;
+  box-shadow: -4px 25px 62px -27px rgba(0, 0, 0, 0.2);
+
+  &.open {
+    transition-delay: 100ms;
+    display: block;
+  }
+
+  &__item {
+    padding: 0.5em 0;
+
+    .link {
+      font-size: 16px;
+      @include transit;
+      color: $font;
+      &:hover {
+        color: $accent;
+      }
+    }
+  }
+}

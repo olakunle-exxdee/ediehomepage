@@ -1,0 +1,95 @@
+#services {
+  margin: 4em 0;
+
+  @include desktop {
+    .services__content {
+      .heading {
+        font-size: 20px;
+      }
+      .items {
+        padding: 2em;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        .item + .item {
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+}
+
+.services__content {
+  a {
+    font-size: 10px;
+  }
+  .heading {
+    font-size: 18px;
+    width: 90%;
+    max-width: 250px;
+  }
+
+  .item {
+    cursor: pointer;
+    max-width: 350px;
+    padding-bottom: 3em;
+    border-radius: 15px;
+    transform: scale(1, 1);
+    @include transit;
+    &:hover {
+      box-shadow: -11px 12px 68px -13px rgba(0, 0, 0, 0.111);
+      transform: scale(1.01, 1.01);
+    }
+
+    .one {
+      padding: 0.3em;
+      border-radius: 5px;
+      margin: 1em;
+      background: $accent;
+      color: lighten($font, 90%);
+    }
+
+    .two {
+      padding: 0.3em;
+      border-radius: 5px;
+      background: $greeny;
+      color: lighten($font, 90%);
+      margin: 1em;
+    }
+
+    .three {
+      padding: 0.3em;
+      border-radius: 5px;
+      background: $redy;
+      color: lighten($font, 90%);
+      margin: 1em;
+    }
+
+    h4 {
+      font-size: 18px;
+      margin: 1em;
+    }
+
+    p {
+      font-size: 12px;
+      margin: 1em;
+      max-width: 250px;
+      color: lighten($font, 30%);
+    }
+
+    .btn {
+      font-size: 8px;
+      padding: 1em 1.5em;
+      border-radius: 7px;
+      text-align: center;
+      margin: 1em;
+      @include transit;
+      background: lighten($font, 55%);
+      color: lighten($font, 90%);
+      &:hover {
+        background: $greeny;
+      }
+    }
+  }
+}

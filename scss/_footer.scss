@@ -1,0 +1,32 @@
+footer {
+  background: $accent;
+  font-size: 12px;
+  color: $white;
+
+  a {
+    color: $white !important;
+  }
+}
+
+.footer {
+  padding: 0.5em;
+
+  @include desktop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em;
+  }
+
+  &__list {
+    margin: 2em 0;
+  }
+
+  .social {
+    margin: 2em 0;
+  }
+
+  .ok {
+    margin: 2em 0;
+  }
+}

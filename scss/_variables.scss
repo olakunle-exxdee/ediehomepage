@@ -1,0 +1,28 @@
+$white: #ffffff;
+$font: #333333;
+$accent: #57b0e2;
+$greeny: #27ae60b3;
+$redy: #eb5757b3;
+$dark: #100e1d;
+
+@mixin transit {
+  transition: all 300ms ease-in;
+}
+
+@function change-text-color($color) {
+  @if (lightness($color) >70) {
+    @return #333;
+  } @else {
+    @return #fff;
+  }
+}
+
+@mixin set-background($color) {
+  background: $color;
+}
+
+@mixin desktop {
+  @media (min-width: 765px) {
+    @content;
+  }
+}
